@@ -458,14 +458,14 @@ elif selected_disease == "Lung Cancer":
             "background-color: #C2E0FF; color: #0000FF; text-align: center;"
         )
 
-        if np.argmax(prediction) == 0:
+        if np.argmax(prediction) == 1:
             st.markdown(
                 "<div style='{}'>No lung Cancer Detected.</div>".format(
                     heart_message_style
                 ),
                 unsafe_allow_html=True,
             )
-        elif np.argmax(prediction) == 1:
+        elif np.argmax(prediction) == 0:
             st.markdown(
                 "<div style='{}'>Lung Cancer Detected.</div>".format(
                     heart_message_style
